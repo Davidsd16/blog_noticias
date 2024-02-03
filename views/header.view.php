@@ -21,7 +21,7 @@
         <div class="contenedor">
             <!-- Logo del blog en la parte izquierda -->
             <div class="logo izquierda">
-                <p><a href="#">Ultimas Noticias</a></p>
+                <p><a href="<?php echo RUTA; ?>">Ultimas Noticias</a></p>
             </div>
 
             <!-- Contenido en la parte derecha del encabezado -->

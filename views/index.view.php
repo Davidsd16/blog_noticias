@@ -6,7 +6,7 @@
         <!-- Etiqueta de artículo -->
         <article>
             <!-- Título del artículo -->
-            <h2 class="titulo">Titulo del articulo</h2>
+            <h2 class="titulo"><a href="#">Titulo del articulo</a>
             <!-- Fecha de publicación -->
             <p class="fecha">1 Enero 2020</p>
 
@@ -34,7 +34,7 @@
         <!-- Etiqueta de artículo -->
         <article>
             <!-- Título del artículo -->
-            <h2 class="titulo">Titulo del articulo</h2>
+            <h2 class="titulo"><a href="#">Titulo del articulo</a>
             <!-- Fecha de publicación -->
             <p class="fecha">1 Enero 2020</p>
 
