@@ -5,7 +5,7 @@ define('RUTA', 'http://localhost/udemy_php/Proyectos%20Udemy/blog_noticias/');
 
 // Configuración de la base de datos
 $bd_config = array(
-    'basedatos' => 'curso_blog',
+    'basedatos' => 'blog_noticias',
     'usuario' => 'root',
     'pass' => ''
 );
