@@ -12,9 +12,9 @@ if (!$conexion) {
 }
 // Se intenta obtener los artículos de la base de datos utilizando la función 'obtenerArticulos' del controlador
 // Se pasa como argumento el número de artículos por página definido en la configuración del blog
-$articulo = obtenerArticulos($blog_config['articulo_por_pagina'], $conexion);
+$articulos = obtenerArticulos($blog_config['articulo_por_pagina'], $conexion);
 // Si no se pueden obtener los artículos, se redirige al usuario a una página de error
-if (!$articulo) {
+if (!$articulos) {
     header('Location: error.php');
 }
 // Se requiere la vista principal del blog para mostrar los artículos obtenidos
