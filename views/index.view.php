@@ -9,7 +9,7 @@
             <!-- Título del artículo -->
             <h2 class="titulo"><a href="single.php?id=<?php echo $articulo['id'];?>"><?php echo $articulo['titulo'];?></a>
             <!-- Fecha de publicación -->
-            <p class="fecha"><?php echo $articulo['fecha'];?></p>
+            <p class="fecha"><?php echo fecha($articulo['fecha']);?></p>
 
             <!-- Contenedor para la imagen destacada -->
             <div class="thumb">
