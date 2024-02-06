@@ -43,3 +43,38 @@ function obtenerArticulos($articulo_por_pagina, $conexion) {
     // Devuelve todas las filas de resultados obtenidas
     return $sentencia->fetchAll();
 }
+
+// Esta función convierte el ID del artículo en un entero limpiando los datos
+function idArticulo($id){
+    return (int)limpiarDatos($id);
+}
+
+// Esta función obtiene un artículo específico de la base de datos por su ID
+// $conexion: El objeto de conexión a la base de datos
+// $id: El ID del artículo que se desea obtener
+function ObtenerArticuloPorId($conexion, $id){
+    // Se ejecuta una consulta SQL para seleccionar el artículo con el ID dado
+    $resultado = $conexion->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
+    // Se obtienen todas las filas de resultado y se devuelven
+    $resultado = $resultado->fetchAll();
+    return ($resultado) ? $resultado : false; // Si hay resultados, devuelve el artículo, de lo contrario, devuelve falso
+}
+
+// Esta función convierte una fecha dada en un formato legible
+// $fecha: La fecha en formato 'YYYY-MM-DD'
+function fecha($fecha){
+    // Se convierte la fecha en un timestamp
+    $timestamp = strtotime($fecha);
+    // Se define un array con los nombres de los meses
+    $meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+                'Agosto','Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ];
+    // Se extrae el día, el mes y el año del timestamp
+    $dia = date('d', $timestamp);
+    $mes = date('m', $timestamp) - 1; // Se resta 1 al mes para que coincida con el índice del array de meses
+    $año = date('Y', $timestamp);
+    
+    // Se construye la fecha en el formato deseado
+    $fecha = "$dia de " . $meses[$mes] . " del $año";
+    return $fecha; // Se devuelve la fecha formateada
+}
+
