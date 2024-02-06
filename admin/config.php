@@ -12,13 +12,13 @@ $bd_config = array(
 
 // Configuración específica del blog
 $blog_config = array(
-    'post_por_pagina' => '2', // Número de publicaciones por página
+    'articulo_por_pagina' => '2', // Número de publicaciones por página
     'carpeta_imagenes' => 'imagenes/' // Carpeta donde se almacenan las imágenes
 );
 
 // Configuración de administrador del blog
 $blog_admin = array(
-    'usuario' => 'Carlos',  // Nombre de usuario del administrador
+    'usuario' => 'David',  // Nombre de usuario del administrador
     'password' => '123'     // Contraseña del administrador
 );
 

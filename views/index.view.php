@@ -21,8 +21,7 @@
 
             <!-- Extracto del artículo -->
             <p class="extracto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti ipsam.
-                Voluptatum minima rerum dolorem earum, id voluptates veritatis consectetur temporibus.
-                Harum obcaecati tenetur dolorem, in cum enim quidem deserunt.
+                Voluptatum minima rerum dolorem earum.
             </p>
 
             <!-- Enlace para continuar leyendo (puede redirigir a la página completa del artículo) -->
@@ -49,8 +48,7 @@
 
             <!-- Extracto del artículo -->
             <p class="extracto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti ipsam.
-                Voluptatum minima rerum dolorem earum, id voluptates veritatis consectetur temporibus.
-                Harum obcaecati tenetur dolorem, in cum enim quidem deserunt.
+                Voluptatum minima rerum dolorem earum.
             </p>
 
             <!-- Enlace para continuar leyendo (puede redirigir a la página completa del artículo) -->
