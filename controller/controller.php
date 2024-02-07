@@ -44,6 +44,15 @@ function obtenerArticulos($articulo_por_pagina, $conexion) {
     return $sentencia->fetchAll();
 }
 
+function numeroPaginas($articulo_por_pagina, $conexion){
+    $total_post = $conexion->prepare("SELECT FOUND_ROWS() as total");
+    $total_post->execute();
+    $total_post = $total_post->fetch()['total'];
+
+    $numero_paginas = ceil($total_post / $articulo_por_pagina);
+    return $numero_paginas;
+}
+
 // Esta función convierte el ID del artículo en un entero limpiando los datos
 function idArticulo($id){
     return (int)limpiarDatos($id);
