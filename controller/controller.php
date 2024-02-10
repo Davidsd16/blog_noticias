@@ -87,3 +87,12 @@ function fecha($fecha){
     return $fecha; // Se devuelve la fecha formateada
 }
 
+function comprobarSesion() {
+    // Verifica si existe una sesión activa para el usuario administrador
+    if (isset($_SESSION['admin'])) {
+        // Redirige al usuario administrador a la página principal si ya tiene una sesión activa
+        header('Location:' . RUTA);
+    }
+}
+
+
