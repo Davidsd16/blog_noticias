@@ -17,7 +17,7 @@
             </div>
 
             <!-- Extracto del artículo -->
-            <p class="extracto"><?php echo $post['texto'] ?>                  
+            <p class="extracto"><?php echo nl2br($post['texto']) ?>                  
         </article>
     </div>
 </div>
