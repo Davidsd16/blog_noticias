@@ -1,7 +1,7 @@
 <?php
 
 // Definir la constante para la ruta del blog
-define('RUTA', 'http://localhost/udemy_php/Proyectos%20Udemy/blog_noticias/');
+define('RUTA', 'http://localhost/udemy_php/Proyectos%20Udemy/blog_noticias');
 
 // Configuración de la base de datos
 $bd_config = array(
