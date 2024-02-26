@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['admin'] = $blog_admin['usuario']; // Utiliza el operador de asignación '=' en lugar de '=='
         
         // Redirigir al usuario administrador a la página de administración
-        header('Location:' . RUTA . '/admin');
+        header('Location:' . RUTA . '/admin/index.php');
+        exit(); // Salir después de redirigir
     }
 }
 
 // Incluir la vista de inicio de sesión
 require 'views/login.view.php';
 ?>
-

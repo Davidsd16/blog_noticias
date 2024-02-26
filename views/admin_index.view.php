@@ -1,5 +1,5 @@
 <!--  Incluye el encabezado de la página -->
-<?php require '../views/header.view.php'; ?>
+<?php require 'header.view.php'; ?>
 
 <div class="contenedor">
     <h2>Panel de Control</h2>
