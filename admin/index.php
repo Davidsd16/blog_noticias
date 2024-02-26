@@ -15,6 +15,7 @@ comprobarSesion();
 // Redirige a la página de error si no se puede establecer la conexión a la base de datos
 if (!$conexion) {
     header('Location: ../error.php');
+    exit; // Es importante salir del script después de la redirección
 }
 
 // Obtiene los artículos para mostrar en la página de administración

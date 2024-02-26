@@ -1,7 +1,5 @@
-<?php
-// Incluye el encabezado de la página
-require '../views/header.view.php';
-?>
+<!--  Incluye el encabezado de la página -->
+<?php require '../views/header.view.php'; ?>
 
 <div class="contenedor">
     <h2>Panel de Control</h2>
@@ -31,7 +29,5 @@ require '../views/header.view.php';
     <?php require "../paginacion.php"; ?>
 </div>
 
-<?php
-// Incluye el pie de página de la página
-require "../views/footer.view.php";
-?>
+<!-- Incluye el pie de página de la página -->
+<?php require '../views/footer.view.php'; ?>
