@@ -16,11 +16,11 @@
                 <!-- Título del artículo -->
                 <h2 class="titulo"><?php echo $articulo['id'] . '-' . $articulo['titulo']; ?></h2>
                 <!-- Enlace para editar el artículo -->
-                <a href="editar.php?id=<?php $articulo['id']; ?>">Editar</a>
+                <a href="editar.php?id=<?php echo $articulo['id']; ?>">Editar</a>
                 <!-- Enlace para ver el artículo -->
-                <a href="../single.php?id=<?php $articulo['id']; ?>">Ver</a>
+                <a href="../single.php?id=<?php echo $articulo['id']; ?>">Ver</a>
                 <!-- Enlace para borrar el artículo -->
-                <a href="borrar.php?id=<?php $articulo['id']; ?>">Borrar</a>
+                <a href="borrar.php?id=<?php echo $articulo['id']; ?>">Borrar</a>
             </article>
         </div>
     <?php endforeach; ?>
