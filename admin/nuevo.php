@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		':thumb' => $_FILES['thumb']['name']
 	));
 
-	header('Location: ' . RUTA . '/admin');
+	header('Location: admin_index.php');
 }
 
 

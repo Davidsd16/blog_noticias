@@ -1,5 +1,5 @@
 <!-- Incluye el encabezado de la página -->
-<?php require 'header.view.php' ?> 
+<?php require 'header.view.php'; ?> 
 
 <div class="contenedor">
     <div class="post">
