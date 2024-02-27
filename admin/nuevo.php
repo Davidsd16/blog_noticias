@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	));
 
 	// Redirigimos al usuario de vuelta al panel de control después de agregar el artículo
-	header('Location: admin_index.php');
+	header('Location: ' . RUTA . '/admin');
 }
 
 // Requerimos la vista del formulario para crear un nuevo artículo
