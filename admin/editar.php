@@ -38,7 +38,22 @@ if ($_SERVER['REQUEST_METHOD' == 'POST']) {
         // Actualizamos el nombre de la imagen
         $thumb = $_FILES['thumb']['name']; 
     }
-    
+
+    // Preparamos la consulta SQL para actualizar los datos del artículo en la base de datos
+    $statement = $conexion->prepare('UPDATE articulos SET titulo = :titulo, extracto = :extracto, texto = :texto, thumb = :thumb WHERE id = :id');
+
+    // Ejecutamos la consulta SQL con los datos actualizados del artículo
+    $statement->execute(array(
+        ':titulo' => $titulo,
+        ':extracto' => $extracto,
+        ':texto' => $texto,
+        ':thumb' => $thumb,
+        ':id' => $id
+    ));
+
+    // Redirigimos de vuelta al panel de administración después de actualizar el artículo
+    header("Location: " . RUTA . '/admin');
+
 } else {
     // Obtenemos el ID del artículo a editar
     $id_articulo = idArticulo($_GET['id']);
