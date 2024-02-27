@@ -25,6 +25,20 @@ if ($_SERVER['REQUEST_METHOD' == 'POST']) {
     $id = limpiarDatos($_POST['id']); // ID del artículo a modificar
     $thumb_guardada = $_POST['thumb-guardada']; // Nombre de la imagen guardada actualmente
     $thumb = $_FILES['thumb']; // Archivo de la nueva imagen
+
+    // Verificamos si se ha seleccionado una nueva imagen para el artículo
+    if (empty($thumb['name'])) {
+        // Si no se seleccionó una nueva imagen, conservamos la imagen anterior
+        $thumb = $thumb_guardada;
+    } else {
+        // Si se seleccionó una nueva imagen, la movemos al directorio de imágenes y actualizamos el nombre de la imagen
+        $archivo_subido = '../' . $blog_config['carpeta_imagenes'] . $_FILES['thumb']['name']; // Ruta del archivo en el servidor
+        // Movemos el archivo al directorio especificado
+        move_uploaded_file($_FILES['thumb']['tmp_name'], $archivo_subido); 
+        // Actualizamos el nombre de la imagen
+        $thumb = $_FILES['thumb']['name']; 
+    }
+    
 } else {
     // Obtenemos el ID del artículo a editar
     $id_articulo = idArticulo($_GET['id']);
