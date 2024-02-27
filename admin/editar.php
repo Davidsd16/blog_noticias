@@ -16,9 +16,15 @@ if(!$conexion){
 	header('Location: ../error.php');
 }
 
-// Verificamos si se reciben datos por el método POST
+// Verificamos si la solicitud se realizó mediante el método POST
 if ($_SERVER['REQUEST_METHOD' == 'POST']) {
-    # code...
+    // Recuperamos y limpiamos los datos del formulario
+    $titulo = limpiarDatos($_POST['titulo']); // Título del artículo
+    $extracto = limpiarDatos($_POST['extracto']); // Extracto del artículo
+    $texto = $_POST['texto']; // Texto completo del artículo
+    $id = limpiarDatos($_POST['id']); // ID del artículo a modificar
+    $thumb_guardada = $_POST['thumb-guardada']; // Nombre de la imagen guardada actualmente
+    $thumb = $_FILES['thumb']; // Archivo de la nueva imagen
 } else {
     // Obtenemos el ID del artículo a editar
     $id_articulo = idArticulo($_GET['id']);
