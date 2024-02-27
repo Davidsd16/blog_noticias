@@ -4,7 +4,7 @@
 <div class="contenedor">
     <h2>Panel de Control</h2>
     <!-- Enlace para crear un nuevo artículo -->
-    <a href="../views/nuevo.view.php" class="btn">Nuevo artículo</a>
+    <a href="../admin/nuevo.php" class="btn">Nuevo artículo</a>
     <!-- Enlace para cerrar sesión -->
     <a href="cerrar.php" class="btn">Cerrar Sesión</a>
 

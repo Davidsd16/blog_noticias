@@ -1,11 +1,11 @@
 <!-- Incluye el encabezado de la página -->
-<?php require 'header.view.php'; ?> 
+<?php require 'header.view.php';?> 
 
 <div class="contenedor">
     <div class="post">
         <article>
 			<!-- Título del formulario -->
-            <h2 class="titulo">Nuevo Articulo</h2> 
+            <h2 class="titulo">Nuevo Artículo</h2> 
 			<!-- Formulario para crear un nuevo artículo -->
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data" class="formulario" method="post">
                 <!-- Campo para ingresar el título del artículo -->
